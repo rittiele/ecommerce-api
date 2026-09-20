@@ -2,9 +2,7 @@
 
 API REST de e-commerce em construção, com foco em aprendizado de back-end e portfólio.
 
-**Etapa atual:** configuração inicial do Node.js, TypeScript e Fastify, com um endpoint `GET /health`.
-
-A explicação desta etapa (conceitos, arquitetura e o que cada arquivo faz) está em [docs/etapa-01.md](docs/etapa-01.md).
+**Etapa atual:** Fastify com `GET /health` e Prisma configurado para PostgreSQL (ainda sem models de negócio).
 
 ## Stack planejada
 
@@ -22,8 +20,13 @@ A explicação desta etapa (conceitos, arquitetura e o que cada arquivo faz) est
 
 Requer Node.js 20 ou superior.
 
+1. Copie `.env.example` para `.env`.
+2. Ajuste `DATABASE_URL` com o usuário, a senha e o banco do seu PostgreSQL local.
+3. Instale as dependências e suba o servidor:
+
 ```bash
 npm install
+npm run prisma:generate
 npm run dev
 ```
 
